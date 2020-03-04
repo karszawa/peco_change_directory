@@ -18,7 +18,6 @@ end
 function peco_change_directory
   begin
     echo $HOME/.config
-    ls -ad */ | perl -pe "s#^#$PWD/#" | egrep -v "^$PWD/\." | head -n 5
     sort -r -t '|' -k 3 $Z_DATA | sed -e 's/\|.*//'
     ghq-list
     ls -ad */ | perl -pe "s#^#$PWD/#" | grep -v \.git
